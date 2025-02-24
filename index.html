@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the blocky adventure with Minecraft Movie Memecoin. Own a piece of the crypto revolution inspired by the upcoming film.">
+    <meta name="keywords" content="Minecraft, memecoin, crypto, movie, blockchain, Solana, server">
+    <meta name="author" content="Grok 3 mini, xAI">
+    <title>Minecraft Movie Memecoin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Minecraft Movie Memecoin Logo" class="logo-img">
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav class="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#trailer" class="nav-link">Trailer</a>
+                <a href="#server" class="nav-link">Server</a>
+                <a href="https://t.me/MinecraftMemecoin" target="_blank" class="nav-link">Telegram</a>
+                <a href="https://x.com/MinecraftMemecoin" target="_blank" class="nav-link">X</a>
+                <a href="https://raydium.io/swap/?inputMint=sol&outputMint=[CA]" target="_blank" class="invest-btn">Buy Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-overlay container">
+                <h1 class="hero-title">Minecraft Movie Memecoin</h1>
+                <p class="hero-subtitle">Join the blocky adventure and own a piece of the crypto revolution</p>
+                <a href="https://raydium.io/swap/?inputMint=sol&outputMint=[CA]" class="cta-btn" target="_blank">Buy Now</a>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section id="countdown" class="countdown">
+            <div class="container">
+                <h2 class="countdown-text">Time Until Movie Release</h2>
+                <div id="timer" class="timer"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">What is Minecraft Movie Memecoin?</h2>
+                <p class="description">Inspired by the upcoming Minecraft movie, this memecoin brings the adventure of the blocky world to the crypto space. Join our community, own a piece of the action, and be part of the revolution.</p>
+                <a href="https://solscan.io/token/[CA]" class="contract-address" target="_blank">CA: [Your Contract Address Here]</a>
+            </div>
+        </section>
+
+        <!-- Server IP Section -->
+        <section id="server" class="server">
+            <div class="container">
+                <h2 class="section-title">Join Our Minecraft Server</h2>
+                <p class="description">Dive into our custom Minecraft server inspired by the movie and memecoin. Play, explore, and earn rewards!</p>
+                <div class="server-info">
+                    <p class="server-ip">Server IP: <strong>minecraftmovie.xyz:25565</strong></p>
+                    <p class="server-instructions">Use Minecraft Java Edition to connect. Click below to join:</p>
+                    <a href="minecraft://minecraftmovie.xyz:25565" class="server-btn" target="_blank">Join Server</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trailer Section -->
+        <section id="trailer" class="trailer">
+            <div class="container">
+                <h2 class="section-title">Watch the Trailer</h2>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PE2YZhcC4NY" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Socials Section -->
+        <section id="socials" class="socials">
+            <div class="container">
+                <h2 class="section-title">Connect With Us</h2>
+                <div class="social-links">
+                    <a href="https://t.me/MinecraftMemecoin" class="social-link" target="_blank">Telegram</a>
+                    <a href="https://x.com/MinecraftMemecoin" class="social-link" target="_blank">X</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Invest Section -->
+        <section id="invest" class="invest">
+            <div class="container">
+                <h2 class="section-title">Invest in Minecraft Movie Memecoin</h2>
+                <p class="description">Join the community and be part of the adventure.</p>
+                <a href="https://raydium.io/swap/?inputMint=sol&outputMint=[CA]" class="invest-btn" target="_blank">Buy Now</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Minecraft Movie Memecoin. All Rights Reserved.</p>
+            <p><a href="/privacy-policy" target="_blank" class="footer-link">Privacy Policy</a> | <a href="/terms" target="_blank" class="footer-link">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Countdown Timer
+        const targetDate = new Date("April 4, 2025 00:00:00").getTime();
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            document.getElementById("timer").innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.getElementById("timer").innerHTML = "Released";
+            }
+        }, 1000);
+
+        // Smooth Scroll and Parallax
+        gsap.registerPlugin(ScrollTrigger);
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Parallax Effect for Hero
+        gsap.to('#hero', {
+            backgroundPosition: 'center 0%',
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '#hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 0.5
+            }
+        });
+    </script>
+</body>
+</html>
